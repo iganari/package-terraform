@@ -1,4 +1,4 @@
 # package-terraform
 My Terraform Knowledge
 
-+ [timestamp](./timestamp) について
++ [timestamp](./func_timestamp) について
