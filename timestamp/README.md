@@ -7,5 +7,11 @@ WIP
 ## でも
 
 ```
-docker run -i -t hashicorp/terraform:light plan main.tf
+docker build . --tag pkg-tf
+```
+```
+cd timestamp
+```
+```
+docker run -i -t -v main.tf:/tmp/main.tf -w /tmp pkg-tf plan main.tf
 ```
