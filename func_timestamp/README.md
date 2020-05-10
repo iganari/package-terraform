@@ -1,4 +1,8 @@
-# About timestamp
+# About Function of timestamp
+
+## Description
+
+Returns the current date and time.
 
 ## Official URL
 
@@ -6,7 +10,17 @@ https://www.terraform.io/docs/configuration/functions/timestamp.html
 
 ## Demo
 
-+ Apply
++ Create main.tf
+
+```
+cat << _EOF_ > main.tf
+output "timestamp" {
+  value = timestamp()
+}
+_EOF_
+```
+
++ Terraform apply
 
 ```
 docker run -i -t -v "$(pwd)":"/tmp/timestamp" -w /tmp/timestamp hashicorp/terraform:0.12.24 apply
