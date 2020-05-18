@@ -1,4 +1,16 @@
-# package-terraform
+# Package Terraform
+
 My Terraform Knowledge
 
-+ [timestamp](./func_timestamp) について
+## Built-in Functions
+
+https://www.terraform.io/docs/configuration/functions.html
+
+### String Functions
+
++ [join](./func_join) について
+  + 配列に入っているリストを繋げる
+
+[timestamp](./func_timestamp) について
+
++ 現時点の timestamp を取得する 
