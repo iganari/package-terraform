@@ -9,3 +9,7 @@ output "join-02" {
 output "join-03" {
   value = join("-", ["foo", "bar", "baz"])
 }
+
+output "join-04" {
+  value = join("", ["foo", "bar", "baz"])
+}
