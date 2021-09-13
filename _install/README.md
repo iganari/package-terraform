@@ -26,3 +26,6 @@ unzip terraform_${_tf_ver}_linux_amd64.zip
 ```
 terraform --version
 ```
+```
+rm -rfv terraform_${_tf_ver}_linux_amd64.zip
+```
