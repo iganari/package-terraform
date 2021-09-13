@@ -11,6 +11,8 @@ terraform apply -auto-approve
 
 ## `-lock-timeout`
 
+:warning: 未検証
+
 + Terraform でリソースを作成する際に、その返り値を待つ時間(= lock を解くまでの時間)。デフォルトは 20分 
 
 ```

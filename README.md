@@ -2,6 +2,10 @@
 
 My Terraform Knowledge
 
+## Preparation
+
+[Install 方法](./_install/README.md)
+
 ## Built-in Functions
 
 https://www.terraform.io/docs/configuration/functions.html
