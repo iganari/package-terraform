@@ -23,7 +23,7 @@ sudo su -
 + Terraform のバージョンを指定
 
 ```
-export _tf_ver='1.0.6'
+export _tf_ver='1.0.9'
 ```
 
 + バイナリのダウンロード
