@@ -17,7 +17,7 @@ resource "google_container_node_pool" "main" {
       "https://www.googleapis.com/auth/cloud-platform"
     ]
     workload_metadata_config {
-      node_metadata = "GKE_METADATA_SERVER"
+      mode = "GKE_METADATA"
     }
   }
 
