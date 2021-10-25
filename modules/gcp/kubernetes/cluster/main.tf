@@ -4,7 +4,8 @@ resource "google_container_cluster" "main" {
   network    = var.cluster.network
   subnetwork = var.cluster.subnetwork
 
-  # enable_autopilot = false
+  # enable_autopilot      = false     ### GKE Autopilot を使用時に true にする
+  enable_shielded_nodes = true      ### Shielded GKE nodes の有効化 
 
   remove_default_node_pool = true
   initial_node_count       = 1 ### 必要なのか迷う
