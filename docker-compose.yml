@@ -1,0 +1,26 @@
+version: '3'
+services:
+  package-terraform-gcp:
+    build: ./docker/gcp
+    container_name: package-terraform-gcp
+    tty: true
+    working_dir: /apps
+    volumes:
+      - ./modules:/apps/modules
+      - ./template:/apps/template
+  # package-terraform-azure:
+  #   build: ./docker/azure
+  #   container_name: package-terraform-azure
+  #   tty: true
+  #   working_dir: /apps
+  #   volumes:
+  #     - ./modules:/apps/modules
+  #     - ./template:/apps/template
+  # package-terraform-aws:
+  #   build: ./docker/aws
+  #   container_name: package-terraform-aws
+  #   tty: true
+  #   working_dir: /apps
+  #   volumes:
+  #     - ./modules:/apps/modules
+  #     - ./template:/apps/template
