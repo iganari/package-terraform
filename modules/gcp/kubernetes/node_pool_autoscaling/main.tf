@@ -19,6 +19,9 @@ resource "google_container_node_pool" "main" {
     workload_metadata_config {
       mode = "GKE_METADATA"
     }
+    shielded_instance_config {
+      enable_secure_boot = true
+    }
   }
 
   autoscaling {
