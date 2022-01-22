@@ -18,7 +18,7 @@ https://github.com/hashicorp/terraform/releases
 sudo su -
 ```
 ```
-export _tf_ver='1.0.6'
+export _tf_ver='1.1.3'
 
 wget https://releases.hashicorp.com/terraform/${_tf_ver}/terraform_${_tf_ver}_linux_amd64.zip /usr/local/bin/terraform_${_tf_ver}_linux_amd64.zip
 unzip terraform_${_tf_ver}_linux_amd64.zip
