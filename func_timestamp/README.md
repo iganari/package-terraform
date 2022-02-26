@@ -20,13 +20,13 @@ cd package-terraform/func_timestamp
 + Terraform apply
 
 ```
-docker run -i -t -v "$(pwd)":"/tmp/pkg-tf" -w /tmp/pkg-tf hashicorp/terraform:0.12.24 apply
+docker run -i -t -v "$(pwd)":"/tmp/pkg-tf" -w /tmp/pkg-tf hashicorp/terraform:1.1.6 apply
 ```
 
 + Result
 
 ```
-$ docker run -i -t -v "$(pwd)":"/tmp/pkg-tf" -w /tmp/pkg-tf hashicorp/terraform:0.12.24 apply
+$ docker run -i -t -v "$(pwd)":"/tmp/pkg-tf" -w /tmp/pkg-tf hashicorp/terraform:1.1.6 apply
 
 Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
 
