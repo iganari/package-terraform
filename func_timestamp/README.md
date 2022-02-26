@@ -10,26 +10,23 @@ https://www.terraform.io/docs/configuration/functions/timestamp.html
 
 ## Demo
 
-+ Create main.tf
++ Clone Repo
 
 ```
-cat << _EOF_ > main.tf
-output "timestamp" {
-  value = timestamp()
-}
-_EOF_
+git clone hoge
+cd hoge
 ```
 
 + Terraform apply
 
 ```
-docker run -i -t -v "$(pwd)":"/tmp/timestamp" -w /tmp/timestamp hashicorp/terraform:0.12.24 apply
+docker run -i -t -v "$(pwd)":"/tmp/pkg-tf" -w /tmp/pkg-tf/func_timestamp hashicorp/terraform:0.12.24 apply
 ```
 
 + Result
 
 ```
-$ docker run -i -t -v "$(pwd)":"/tmp/timestamp" -w /tmp/timestamp hashicorp/terraform:0.12.24 apply
+$ docker run -i -t -v "$(pwd)":"/tmp/pkg-tf" -w /tmp/pkg-tf/func_timestamp hashicorp/terraform:0.12.24 apply
 
 Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
 
