@@ -20,13 +20,13 @@ cd package-terraform/func_timestamp
 + Terraform apply
 
 ```
-docker run -i -t -v "$(pwd)":"/tmp/pkg-tf" -w /tmp/pkg-tf hashicorp/terraform:1.1.6 apply
+docker run -i -t -v "$(pwd)":"/tmp/pkg-tf" -w /tmp/pkg-tf --name pkg-tf hashicorp/terraform:1.1.6 apply
 ```
 
 + Result
 
 ```
-$ docker run -i -t -v "$(pwd)":"/tmp/pkg-tf" -w /tmp/pkg-tf hashicorp/terraform:1.1.6 apply
+$ docker run -i -t -v "$(pwd)":"/tmp/pkg-tf" -w /tmp/pkg-tf --name hashicorp/terraform:1.1.6 apply
 
 Changes to Outputs:
   ~ format_timestamp = "2022-02-26-04-30" -> (known after apply)
