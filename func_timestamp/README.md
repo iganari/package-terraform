@@ -6,7 +6,7 @@ Returns the current date and time.
 
 ## Official URL
 
-https://www.terraform.io/docs/configuration/functions/timestamp.html
+[timestamp Function](https://www.terraform.io/docs/configuration/functions/timestamp.html)
 
 ## Demo
 
