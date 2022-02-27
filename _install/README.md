@@ -36,7 +36,9 @@ wget https://releases.hashicorp.com/terraform/${_tf_ver}/terraform_${_tf_ver}_li
 + アーカイブファイルの展開
 
 ```
+cd /usr/local/bin
 unzip terraform_${_tf_ver}_linux_amd64.zip
+cd -
 ```
 
 + 動作確認のために Version を出力
@@ -49,4 +51,7 @@ terraform --version
 
 ```
 rm -rfv terraform_${_tf_ver}_linux_amd64.zip
+```
+```
+exit
 ```
