@@ -14,20 +14,41 @@ https://github.com/hashicorp/terraform/releases
 
 ## Linux にインストールする
 
++ 作業簡易化のため root になる
+
 ```
 sudo su -
 ```
-```
-export _tf_ver='1.1.3'
 
++ Terraform のバージョンを指定
+
+```
+export _tf_ver='1.1.4'
+```
+
++ バイナリのダウンロード
+
+```
+cd /usr/local/bin/
 wget https://releases.hashicorp.com/terraform/${_tf_ver}/terraform_${_tf_ver}_linux_amd64.zip /usr/local/bin/terraform_${_tf_ver}_linux_amd64.zip
+```
+
++ アーカイブファイルの展開
+
+```
 cd /usr/local/bin
 unzip terraform_${_tf_ver}_linux_amd64.zip
 cd -
 ```
+
++ 動作確認のために Version を出力
+
 ```
 terraform --version
 ```
+
++ 不要なアーカイブファイルの削除
+
 ```
 rm -rfv terraform_${_tf_ver}_linux_amd64.zip
 ```
