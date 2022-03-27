@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+
+  pkg-tf:
+    build: .
+    # image: iganarix/cld-gcloud
+    container_name: pkg-tf
+    tty: true
+    restart: always
+    volumes:
+      - ./:/usr/local/src
+    working_dir: /usr/local/src
+
+networks:
+  pkg-tf:
+    name: pkg-tf
+    driver: bridge
