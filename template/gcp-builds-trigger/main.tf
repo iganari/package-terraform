@@ -1,8 +1,8 @@
 terraform {
-  backend "gcs" {
-    bucket = "Your Google Storage Bucket"
-    prefix = "gcp-gke"
-  }
+  # backend "gcs" {
+  #   bucket = "Your Google Storage Bucket"
+  #   prefix = "gcp-gke"
+  # }
   required_version = "~> 1.0"
   required_providers {
     google = {
@@ -17,40 +17,73 @@ provider "google" {
 }
 
 
-/*
-APIs & Services
-*/
-module "service" {
-  source     = "../modules/project/service"
-
-  project_id = var.gcp_project_id
-  services = [
-    "compute",
-    "container",
-    "storage-component",
-    "iam",
-    "dns",
-    "logging",
-    "monitoring",
-  ]
-}
-# output "service" {
-#   value = module.service
+# /*
+# APIs & Services
+# */
+# module "service" {
+#   source     = "../modules/project/service"
+# 
+#   project_id = var.gcp_project_id
+#   services = [
+#     "cloudbuild",
+#   ]
 # }
+# # output "service" {
+# #   value = module.service
+# # }
 
-resource "google_cloudbuild_trigger" "manual-trigger" {
+
+
+
+# cloudscheduler.
+
+locals {
+  apis = [
+    "cloudbuild",
+    "cloudscheduler",
+  ]
+} 
+
+resource "google_project_service" "main" {
+
+  for_each = toset(local.apis)
+
+  project            = var.gcp_project_id
+  service            = "${each.value}.googleapis.com"
+  disable_on_destroy = false
+
+
+
+  timeouts {
+    create = "40m"
+    update = "40m"
+    delete = "40m"
+  }
+}
+
+
+
+
+
+
+
+resource "google_cloudbuild_trigger" "main" {
+  depends_on = [google_project_service.main]
+
   name        = "manual-build"
 
   source_to_build {
-    uri       = "https://hashicorp/terraform-provider-google-beta"
-    ref       = "refs/heads/main"
     repo_type = "GITHUB"
+    uri       = "https://github.com/iganari/package-terraform"
+    # ref       = "refs/heads/main"
+    ref       = "feature/add-gcp-manual-build-trigger"
   }
 
   git_file_source {
-    path      = "cloudbuild.yaml"
-    uri       = "https://hashicorp/terraform-provider-google-beta"
-    revision  = "refs/heads/main"
     repo_type = "GITHUB"
+    path      = "template/gcp-builds-trigger/cloudbuild.yaml"
+    # uri       = "https://github.com/iganari/package-terraform"
+    # revision  = "refs/heads/main"
+    # revision  = "feature/add-gcp-manual-build-trigger"
   }
 }

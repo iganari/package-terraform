@@ -2,3 +2,4 @@
 !.gitignore
 !main.tf
 !variable.tf.sample
+!cloudbuild.yaml
