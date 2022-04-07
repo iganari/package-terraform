@@ -34,7 +34,7 @@ docker-compose rm -f
 ## Terraform memo
 
 ```
-gcloud auth application-default login -q
+gcloud auth application-default login --no-launch-browser -q
 ```
 ```
 terraform plan
