@@ -31,6 +31,12 @@ gcloud auth application-default login -q
 terraform init
 ```
 
++ 読み込んでいる Provider のバージョンをアップデートする
+
+```
+terraform init -upgrade
+```
+
 + Terraform のテスト実行
 
 ```
