@@ -43,6 +43,13 @@ sudo su -
 export _tf_ver='1.2.4'
 ```
 
++ もしくは最新バージョンを取りたい場合
+
+```
+export _latest_tf_ver=$(curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest | jq -r .tag_name)
+export _tf_ver=`$"_latest_tf_ver"`
+```
+
 + バイナリのダウンロード
 
 ```
