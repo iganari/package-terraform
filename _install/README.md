@@ -57,11 +57,11 @@ cd /usr/local/bin/
 wget https://releases.hashicorp.com/terraform/${_tf_ver}/terraform_${_tf_ver}_linux_amd64.zip /usr/local/bin/terraform_${_tf_ver}_linux_amd64.zip
 ```
 
-+ アーカイブファイルの展開
++ アーカイブファイルの展開と権限付与
 
 ```
-cd /usr/local/bin
 unzip terraform_${_tf_ver}_linux_amd64.zip
+chmod 0755 /usr/local/bin/terraform
 cd -
 ```
 
