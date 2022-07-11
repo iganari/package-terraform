@@ -2,17 +2,34 @@
 
 ## Download
 
++ ダウンロードページ
+
 ```
-## Download Terraform
 https://www.terraform.io/downloads.html
 ```
 
++ リリースタグ
+
 ```
-## リリースタグ
 https://github.com/hashicorp/terraform/releases
 ```
 
++ 最新バージョンを cURL と jq で確認する
+
+```
+curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest | jq -r .tag_name
+```
+
 ## Linux にインストールする
+
+### Ubuntu / Debian
+
++ 以下の OS が対象
+  + Ubuntu サーバーとかは基本 `amd64` でよい(たぶん)
+
+```
+WIP
+```
 
 + 作業簡易化のため root になる
 
@@ -23,7 +40,7 @@ sudo su -
 + Terraform のバージョンを指定
 
 ```
-export _tf_ver='1.1.4'
+export _tf_ver='1.2.4'
 ```
 
 + バイナリのダウンロード
