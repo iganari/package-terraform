@@ -62,7 +62,6 @@ wget https://releases.hashicorp.com/terraform/${_tf_ver}/terraform_${_tf_ver}_li
 ```
 unzip terraform_${_tf_ver}_linux_amd64.zip
 chmod 0755 /usr/local/bin/terraform
-cd -
 ```
 
 + 動作確認のために Version を出力
