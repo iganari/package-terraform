@@ -3,22 +3,14 @@
 ## Download
 
 + ダウンロードページ
-
-```
-https://www.terraform.io/downloads.html
-```
+  + https://www.terraform.io/downloads.html
 
 + リリースタグ
-
-```
-https://github.com/hashicorp/terraform/releases
-```
+  + https://github.com/hashicorp/terraform/releases
 
 + 最新バージョンを cURL と jq で確認する
+  + curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest | jq -r .tag_name
 
-```
-curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest | jq -r .tag_name
-```
 
 ## Linux にインストールする
 
@@ -28,7 +20,24 @@ curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest | jq -r
   + Ubuntu サーバーとかは基本 `amd64` でよい(たぶん)
 
 ```
-WIP
+uname -a
+```
+```
+### 例
+
+$ uname -a
+Linux igrs-ws-2023-vm 5.15.0-1021-gcp #28-Ubuntu SMP Fri Oct 14 15:46:06 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+
+
+# x86_64 の場合は  amd64
+# aarch64 の場合は arm64 
+```
+
+
++ もしくは下記
+
+```
+cat /proc/cpuinfo
 ```
 
 + 作業簡易化のため root になる
