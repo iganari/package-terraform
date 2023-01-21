@@ -26,7 +26,7 @@ uname -a
 ### 例
 
 $ uname -a
-Linux igrs-ws-2023-vm 5.15.0-1021-gcp #28-Ubuntu SMP Fri Oct 14 15:46:06 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+Linux my-vm 5.15.0-1021-gcp #28-Ubuntu SMP Fri Oct 14 15:46:06 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
 
 
 # x86_64 の場合は  amd64
