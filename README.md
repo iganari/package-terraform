@@ -42,3 +42,41 @@ terraform plan
 ```
 terraform apply --auto-approve
 ```
+
+## 実行方法
+
++ Terraform 実行のための GCP 認証
+
+```
+gcloud auth application-default login -q
+```
+
++ Terraform の初期設定
+
+```
+terraform init
+```
+
++ 読み込んでいる Provider のバージョンをアップデートする
+
+```
+terraform init -upgrade
+```
+
++ Terraform のテスト実行
+
+```
+terraform plan
+```
+
++ Terraform 実行手順
+
+```
+terraform apply --auto-approve
+```
+
++ 自動的に変更した状態を取り込むだけのコマンド
+
+```
+terraform apply -refresh-only
+```
