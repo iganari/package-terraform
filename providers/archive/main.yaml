@@ -1,0 +1,8 @@
+data "archive_file" "dir_zip_test" {
+  type        = "zip"
+  source_dir  = "./zip-shite-code-dir"
+  output_path = "output_dir.zip"
+}
+output "dir_zip_test" {
+  value = data.dir_zip_test
+}
