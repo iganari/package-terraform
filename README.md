@@ -21,6 +21,7 @@ https://www.terraform.io/docs/configuration/functions.html
 + [timestamp](./func_timestamp) について
   + 現時点の timestamp を取得する
 
+
 ## Docker を用いた簡易開発環境
 
 ```
@@ -45,4 +46,41 @@ https://github.com/terraform-google-modules
 ```
 Terraform Registry | Google Cloud and HashiCorp
 https://registry.terraform.io/namespaces/terraform-google-modules
+
+## 実行方法
+
++ Terraform 実行のための GCP 認証
+
+```
+gcloud auth application-default login -q
+```
+
++ Terraform の初期設定
+
+```
+terraform init
+```
+
++ 読み込んでいる Provider のバージョンをアップデートする
+
+```
+terraform init -upgrade
+```
+
++ Terraform のテスト実行
+
+```
+terraform plan
+```
+
++ Terraform 実行手順
+
+```
+terraform apply --auto-approve
+```
+
++ 自動的に変更した状態を取り込むだけのコマンド
+
+```
+terraform apply -refresh-only
 ```
