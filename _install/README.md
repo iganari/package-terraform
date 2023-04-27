@@ -55,7 +55,11 @@ export _tf_ver='1.2.4'
 + もしくは最新バージョンを取りたい場合
 
 ```
+### 最新バージョンの取得
 export _latest_tf_ver=$(curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest | jq -r .tag_name)
+echo ${_latest_tf_ver}
+
+### 環境変数を上書き
 export _tf_ver=`echo "$_latest_tf_ver" | sed s'/v//'g`
 ```
 
