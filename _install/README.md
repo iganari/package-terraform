@@ -33,7 +33,6 @@ Linux my-vm 5.15.0-1021-gcp #28-Ubuntu SMP Fri Oct 14 15:46:06 UTC 2022 x86_64 x
 # aarch64 の場合は arm64 
 ```
 
-
 + もしくは下記
 
 ```
@@ -49,7 +48,7 @@ sudo su -
 + Terraform のバージョンを指定
 
 ```
-export _tf_ver='1.2.4'
+export _tf_ver='1.4.6'
 ```
 
 + もしくは最新バージョンを取りたい場合
@@ -88,6 +87,15 @@ terraform --version
 ```
 rm -rfv terraform_${_tf_ver}_linux_amd64.zip
 ```
+
++ ROOT ユーザからログアウト
+
 ```
 exit
+```
+
++ ROOT ユーザ以外のユーザで Terraform のバージョンを確認する
+
+```
+terraform --version
 ```
