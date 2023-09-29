@@ -48,6 +48,9 @@ export _tf_ver='1.2.4'
 ```
 export _latest_tf_ver=$(curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest | jq -r .tag_name)
 export _tf_ver=`echo "$_latest_tf_ver" | sed s'/v//'g`
+
+### Version の確認
+echo ${_tf_ver}
 ```
 
 + バイナリのダウンロード
