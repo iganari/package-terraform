@@ -80,6 +80,22 @@ terraform --version
 ```
 rm -rfv terraform_${_tf_ver}_linux_amd64.zip
 ```
+
++ ROOT ユーザから抜ける
+
 ```
 exit
+```
+
++ alias を設定しておく( 1 回やれば OK )
+
+```
+echo 'alias tf="terraform"' >> ~/.bashrc
+source ~/.bashrc
+```
+
++ 動作確認
+
+```
+tf --version
 ```
