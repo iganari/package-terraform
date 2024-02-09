@@ -2,6 +2,9 @@
 
 My Terraform Knowledge
 
+---> https://github.com/iganari/module-terraform に移行中
+
+
 ## Preparation
 
 [Install 方法](./_install/README.md)
