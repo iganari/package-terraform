@@ -39,10 +39,10 @@ sudo su -
 
 + Terraform のバージョンを指定
   + https://github.com/hashicorp/terraform/releases
-  + 2024/03 の時点では **1.12.2** が最新
+  + 2026/10 の時点では **1.16.5** が最新
 
 ```
-export _tf_ver='1.12.2'
+export _tf_ver='1.16.5'
 ```
 
 + もしくは最新バージョンを取りたい場合
